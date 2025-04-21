@@ -1,0 +1,454 @@
+{
+  "play": {
+    "path": "/live/song/start_playing",
+    "args": [],
+    "response": "Starting playback."
+  },
+  "stop": {
+    "path": "/live/song/stop_playing",
+    "args": [],
+    "response": "Stopping playback."
+  },
+
+  "stop record": {
+  "path": "/live/song/set/session_record",
+  "args": [0],
+  "response": "Stopping global recording in Arrangement View."
+  },
+
+
+  "create midi track": {
+    "path": "/live/song/create_midi_track",
+    "args": [
+      -1
+    ],
+    "response": "Creating a new MIDI track."
+  },
+  "create midi and record": {
+  "path": ["/live/song/create_midi_track", "/live/track/set/arm"],
+  "args": [[-1], [-1, 1]],
+  "response": "Creating MIDI track and arming it for recording."
+  },
+  "create audio track": {
+    "path": "/live/song/create_audio_track",
+    "args": [
+      -1
+    ],
+    "response": "Creating a new audio track."
+  },
+  "create audio and record": {
+  "path": ["/live/song/create_audio_track", "/live/track/set/arm"],
+  "args": [[-1], [-1, 1]],
+  "response": "Creating audio track and arming it for recording."
+  },
+  "create return track": {
+    "path": "/live/song/create_return_track",
+    "args": [],
+    "response": "Creating return track."
+  },
+  "eq": {
+  "path": "/live/device/load",
+  "args": ["SELECTED", "EQ Eight"],
+  "response": "Adding EQ Eight to selected track."
+  },
+  "record clip 00": {
+  "path": "/live/clip_slot/create_clip",
+  "args": [0, 0, 8],
+  "response": "Recording clip in track 0, slot 0."
+  },
+  "create scene": {
+    "path": "/live/song/create_scene",
+    "args": [
+      -1
+    ],
+    "response": "Creating a new scene."
+  },
+  "delete scene 0": {
+    "path": "/live/song/delete_scene",
+    "args": [
+      0
+    ],
+    "response": "Deleting scene 0."
+  },
+  "delete return track 0": {
+    "path": "/live/song/delete_return_track",
+    "args": [
+      0
+    ],
+    "response": "Deleting return track 0."
+  },
+  "delete track": {
+    "path": "/live/song/delete_track",
+    "args": [
+      0
+    ],
+    "response": "Deleting track 0."
+  },
+  "duplicate scene 0": {
+    "path": "/live/song/duplicate_scene",
+    "args": [
+      0
+    ],
+    "response": "Duplicating scene 0."
+  },
+  "duplicate track 0": {
+    "path": "/live/song/duplicate_track",
+    "args": [
+      0
+    ],
+    "response": "Duplicating track 0."
+  },
+  "capture midi": {
+    "path": "/live/song/capture_midi",
+    "args": [],
+    "response": "Capturing MIDI input."
+  },
+  "continue playing": {
+    "path": "/live/song/continue_playing",
+    "args": [],
+    "response": "Resuming playback."
+  },
+  "stop all clips": {
+    "path": "/live/song/stop_all_clips",
+    "args": [],
+    "response": "Stopping all clips."
+  },
+  "tap tempo": {
+    "path": "/live/song/tap_tempo",
+    "args": [],
+    "response": "Tapping tempo."
+  },
+  "session record": {
+    "path": "/live/song/trigger_session_record",
+    "args": [],
+    "response": "Toggling session record."
+  },
+  "undo": {
+    "path": "/live/song/undo",
+    "args": [],
+    "response": "Undoing last action."
+  },
+  "redo": {
+    "path": "/live/song/redo",
+    "args": [],
+    "response": "Redoing last action."
+  },
+  "jump 4 beats": {
+    "path": "/live/song/jump_by",
+    "args": [
+      4
+    ],
+    "response": "Jumping song position by 4 beats."
+  },
+  "next cue": {
+    "path": "/live/song/jump_to_next_cue",
+    "args": [],
+    "response": "Jumping to next cue."
+  },
+  "prev cue": {
+    "path": "/live/song/jump_to_prev_cue",
+    "args": [],
+    "response": "Jumping to previous cue."
+  },
+  "set selected scene 0": {
+    "path": "/live/view/set/selected_scene",
+    "args": [
+      0
+    ],
+    "response": "Selecting scene 0."
+  },
+  "set selected track 0": {
+    "path": "/live/view/set/selected_track",
+    "args": [
+      0
+    ],
+    "response": "Selecting track 0."
+  },
+  "set selected clip 0 0": {
+    "path": "/live/view/set/selected_clip",
+    "args": [
+      0,
+      0
+    ],
+    "response": "Selecting clip 0 on track 0."
+  },
+  "track 0 is armed": {
+    "path": "/live/track/get/arm",
+    "args": [
+      0
+    ],
+    "response": "Querying if track 0 is armed."
+  },
+  "track 0 is muted": {
+    "path": "/live/track/get/mute",
+    "args": [
+      0
+    ],
+    "response": "Querying if track 0 is muted."
+  },
+  "track 0 is solo": {
+    "path": "/live/track/get/solo",
+    "args": [
+      0
+    ],
+    "response": "Querying if track 0 is solo."
+  },
+  "track 0 name": {
+    "path": "/live/track/get/name",
+    "args": [
+      0
+    ],
+    "response": "Getting track 0 name."
+  },
+  "track 0 volume": {
+    "path": "/live/track/get/volume",
+    "args": [
+      0
+    ],
+    "response": "Getting track 0 volume."
+  },
+  "track 0 pan": {
+    "path": "/live/track/get/panning",
+    "args": [
+      0
+    ],
+    "response": "Getting track 0 panning."
+  },
+  "track 0 meter": {
+    "path": "/live/track/get/output_meter_level",
+    "args": [
+      0
+    ],
+    "response": "Getting track 0 output meter."
+  },
+  "is playing": {
+    "path": "/live/song/get/is_playing",
+    "args": [],
+    "response": "Querying if Live is playing."
+  },
+  "get tempo": {
+    "path": "/live/song/get/tempo",
+    "args": [],
+    "response": "Getting tempo."
+  },
+  "get loop start": {
+    "path": "/live/song/get/loop_start",
+    "args": [],
+    "response": "Getting loop start."
+  },
+  "get loop length": {
+    "path": "/live/song/get/loop_length",
+    "args": [],
+    "response": "Getting loop length."
+  },
+  "get track names": {
+    "path": "/live/song/get/track_names",
+    "args": [
+      0,
+      8
+    ],
+    "response": "Getting track names."
+  },
+  "get selected scene": {
+    "path": "/live/view/get/selected_scene",
+    "args": [],
+    "response": "Getting selected scene."
+  },
+  "get selected track": {
+    "path": "/live/view/get/selected_track",
+    "args": [],
+    "response": "Getting selected track."
+  },
+  "get selected clip": {
+    "path": "/live/view/get/selected_clip",
+    "args": [],
+    "response": "Getting selected clip."
+  },
+  "live test": {
+    "path": "/live/test",
+    "args": [],
+    "response": "Testing OSC connection."
+  },
+  "get live version": {
+    "path": "/live/application/get/version",
+    "args": [],
+    "response": "Getting Ableton Live version."
+  },
+  "reload osc": {
+    "path": "/live/api/reload",
+    "args": [],
+    "response": "Reloading AbletonOSC server."
+  },
+  "get log level": {
+    "path": "/live/api/get/log_level",
+    "args": [],
+    "response": "Getting current log level."
+  },
+  "set log debug": {
+    "path": "/live/api/set/log_level",
+    "args": [
+      "debug"
+    ],
+    "response": "Setting log level to debug."
+  },
+  "set log info": {
+    "path": "/live/api/set/log_level",
+    "args": [
+      "info"
+    ],
+    "response": "Setting log level to info."
+  },
+  "set log warning": {
+    "path": "/live/api/set/log_level",
+    "args": [
+      "warning"
+    ],
+    "response": "Setting log level to warning."
+  },
+  "set log error": {
+    "path": "/live/api/set/log_level",
+    "args": [
+      "error"
+    ],
+    "response": "Setting log level to error."
+  },
+  "set log critical": {
+    "path": "/live/api/set/log_level",
+    "args": [
+      "critical"
+    ],
+    "response": "Setting log level to critical."
+  },
+  "fire clip slot 0 0": {
+    "path": "/live/clip_slot/fire",
+    "args": [
+      0,
+      0
+    ],
+    "response": "Firing clip slot 0 on track 0."
+  },
+  "create clip slot 0 0": {
+    "path": "/live/clip_slot/create_clip",
+    "args": [
+      0,
+      0,
+      4
+    ],
+    "response": "Creating 4-beat clip in slot 0 on track 0."
+  },
+  "delete clip slot 0 0": {
+    "path": "/live/clip_slot/delete_clip",
+    "args": [
+      0,
+      0
+    ],
+    "response": "Deleting clip in slot 0 on track 0."
+  },
+  "slot 0 0 has clip": {
+    "path": "/live/clip_slot/get/has_clip",
+    "args": [
+      0,
+      0
+    ],
+    "response": "Checking if slot 0 on track 0 has a clip."
+  },
+  "slot 0 0 has stop": {
+    "path": "/live/clip_slot/get/has_stop_button",
+    "args": [
+      0,
+      0
+    ],
+    "response": "Checking if slot 0 on track 0 has a stop button."
+  },
+  "set stop in slot 0 0": {
+    "path": "/live/clip_slot/set/has_stop_button",
+    "args": [
+      0,
+      0,
+      1
+    ],
+    "response": "Enabling stop button in slot 0 on track 0."
+  },
+  "duplicate clip slot 0 0 to 1 0": {
+    "path": "/live/clip_slot/duplicate_clip_to",
+    "args": [
+      0,
+      0,
+      1,
+      0
+    ],
+    "response": "Duplicating clip from slot 0 on track 0 to slot 0 on track 1."
+  },
+  "play clip 0 0": {
+    "path": "/live/clip/fire",
+    "args": [
+      0,
+      0
+    ],
+    "response": "Playing clip 0 on track 0."
+  },
+  "stop clip 0 0": {
+    "path": "/live/clip/stop",
+    "args": [
+      0,
+      0
+    ],
+    "response": "Stopping clip 0 on track 0."
+  },
+  "duplicate loop clip 0 0": {
+    "path": "/live/clip/duplicate_loop",
+    "args": [
+      0,
+      0
+    ],
+    "response": "Duplicating loop of clip 0 on track 0."
+  },
+  "clip 0 0 is playing": {
+    "path": "/live/clip/get/is_playing",
+    "args": [
+      0,
+      0
+    ],
+    "response": "Checking if clip 0 on track 0 is playing."
+  },
+  "clip 0 0 name": {
+    "path": "/live/clip/get/name",
+    "args": [
+      0,
+      0
+    ],
+    "response": "Getting name of clip 0 on track 0."
+  },
+  "clip 0 0 gain": {
+    "path": "/live/clip/get/gain",
+    "args": [
+      0,
+      0
+    ],
+    "response": "Getting gain of clip 0 on track 0."
+  },
+  "clip 0 0 length": {
+    "path": "/live/clip/get/length",
+    "args": [
+      0,
+      0
+    ],
+    "response": "Getting length of clip 0 on track 0."
+  },
+  "clip 0 0 pitch": {
+    "path": "/live/clip/get/pitch_coarse",
+    "args": [
+      0,
+      0
+    ],
+    "response": "Getting coarse pitch of clip 0 on track 0."
+  },
+  "clip 0 0 is recording": {
+    "path": "/live/clip/get/is_recording",
+    "args": [
+      0,
+      0
+    ],
+    "response": "Checking if clip 0 on track 0 is recording."
+  }
+}
