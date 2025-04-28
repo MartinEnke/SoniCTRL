@@ -1,0 +1,61 @@
+COMMANDS = {
+    # Basic
+    "start play": ("/live/song/start_playing", [], "Starting playback."),
+    "stop play": ("/live/song/stop_playing", [], "Stopping playback."),
+    "create midi track": ("/live/song/create_midi_track", [-1], "Creating a new MIDI track."),
+    "create audio track": ("/live/song/create_audio_track", [-1], "Creating a new audio track."),
+    "get live version": ("/live/application/get/version", [], "Getting Ableton Live version."),
+
+    # Application API
+    "live test": ("/live/test", [], "Testing OSC connection."),
+    "reload osc": ("/live/api/reload", [], "Reloading AbletonOSC server."),
+    "get log level": ("/live/api/get/log_level", [], "Getting current log level."),
+    "set log debug": ("/live/api/set/log_level", ["debug"], "Setting log level to debug."),
+    "set log info": ("/live/api/set/log_level", ["info"], "Setting log level to info."),
+    "set log warning": ("/live/api/set/log_level", ["warning"], "Setting log level to warning."),
+    "set log error": ("/live/api/set/log_level", ["error"], "Setting log level to error."),
+    "set log critical": ("/live/api/set/log_level", ["critical"], "Setting log level to critical."),
+
+    # Song API
+    "capture midi": ("/live/song/capture_midi", [], "Capturing MIDI input."),
+    "continue playing": ("/live/song/continue_playing", [], "Resuming playback."),
+    "create return track": ("/live/song/create_return_track", [], "Creating return track."),
+    "create scene": ("/live/song/create_scene", [-1], "Creating a new scene."),
+    "delete scene 0": ("/live/song/delete_scene", [0], "Deleting scene 0."),
+    "delete return track 0": ("/live/song/delete_return_track", [0], "Deleting return track 0."),
+    "delete track 0": ("/live/song/delete_track", [0], "Deleting track 0."),
+    "duplicate scene 0": ("/live/song/duplicate_scene", [0], "Duplicating scene 0."),
+    "duplicate track 0": ("/live/song/duplicate_track", [0], "Duplicating track 0."),
+    "jump 4 beats": ("/live/song/jump_by", [4], "Jumping song position by 4 beats."),
+    "next cue": ("/live/song/jump_to_next_cue", [], "Jumping to next cue."),
+    "prev cue": ("/live/song/jump_to_prev_cue", [], "Jumping to previous cue."),
+    "redo": ("/live/song/redo", [], "Redoing last action."),
+    "stop all clips": ("/live/song/stop_all_clips", [], "Stopping all clips."),
+    "tap tempo": ("/live/song/tap_tempo", [], "Tapping tempo."),
+    "session record": ("/live/song/trigger_session_record", [], "Toggling session record."),
+    "undo": ("/live/song/undo", [], "Undoing last action."),
+
+    # Song Getters
+    "is playing": ("/live/song/get/is_playing", [], "Querying if Live is playing."),
+    "get tempo": ("/live/song/get/tempo", [], "Getting tempo."),
+    "get loop start": ("/live/song/get/loop_start", [], "Getting loop start."),
+    "get loop length": ("/live/song/get/loop_length", [], "Getting loop length."),
+    "get track names": ("/live/song/get/track_names", [0, 8], "Getting track names."),
+
+    # View API
+    "get selected scene": ("/live/view/get/selected_scene", [], "Getting selected scene."),
+    "get selected track": ("/live/view/get/selected_track", [], "Getting selected track."),
+    "get selected clip": ("/live/view/get/selected_clip", [], "Getting selected clip."),
+    "set selected scene 0": ("/live/view/set/selected_scene", [0], "Selecting scene 0."),
+    "set selected track 0": ("/live/view/set/selected_track", [0], "Selecting track 0."),
+    "set selected clip 0 0": ("/live/view/set/selected_clip", [0, 0], "Selecting clip 0 on track 0."),
+
+    # Track API – Example with Track 0
+    "track 0 is armed": ("/live/track/get/arm", [0], "Querying if track 0 is armed."),
+    "track 0 is muted": ("/live/track/get/mute", [0], "Querying if track 0 is muted."),
+    "track 0 is solo": ("/live/track/get/solo", [0], "Querying if track 0 is solo."),
+    "track 0 name": ("/live/track/get/name", [0], "Getting track 0 name."),
+    "track 0 volume": ("/live/track/get/volume", [0], "Getting track 0 volume."),
+    "track 0 pan": ("/live/track/get/panning", [0], "Getting track 0 panning."),
+    "track 0 meter": ("/live/track/get/output_meter_level", [0], "Getting track 0 output meter.")
+}

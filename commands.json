@@ -24,7 +24,7 @@
     ],
     "response": "Creating a new MIDI track."
   },
-  "create midi and record": {
+  "create midi record": {
   "path": ["/live/song/create_midi_track", "/live/track/set/arm"],
   "args": [[-1], [-1, 1]],
   "response": "Creating MIDI track and arming it for recording."
@@ -36,7 +36,7 @@
     ],
     "response": "Creating a new audio track."
   },
-  "create audio and record": {
+  "create audio record": {
   "path": ["/live/song/create_audio_track", "/live/track/set/arm"],
   "args": [[-1], [-1, 1]],
   "response": "Creating audio track and arming it for recording."
