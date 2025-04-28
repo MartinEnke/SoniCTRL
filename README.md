@@ -1,5 +1,7 @@
 # 🎙️ SoniCTRL — Voice-Controlled OSC Assistant for Ableton Live
 
+![Banner](banner1.png)
+
 SoniCTRL is a voice-controlled interface that lets you speak to Ableton Live using natural commands.  
 It captures your voice, maps it to commands defined in a JSON file, and sends OSC messages to Ableton using [AbletonOSC](https://github.com/ideoforms/AbletonOSC).
 
